@@ -72,6 +72,68 @@ get_and_store_password() {
     print_success "Password stored securely"
 }
 
+import
+import_key() {
+    print_info 
+    prin
+"Setting up key import..."
+
+    # Prompt for the key and password
+
+    re
+read -p "Enter the key to import: " key
+
+
+read -s -p "Enter the password: " password
+    echo  # Print a newline after password input
+
+
+
+
+# Execute the command
+    print_info 
+    print_inf
+
+
+"Importing key with the provided credentials..."
+
+    i
+
+
+if echo "$password" | sudo java -jar validator.jar --import-key "$key" "$password"; then
+        print_success 
+        print_su
+"Key imported successfully."
+
+
+else
+        print_error 
+        print_erro
+
+        print_
+"Failed to import key."
+    fi
+}
+
+# Example main function for running the script
+
+ma
+main() {
+
+
+echo -e "\n${YELLOW}======= Key Import Setup =======${NC}\n"
+    import_key
+
+    import_key
+
+
+    im
+echo -e "\n${GREEN}======= Setup Complete =======${NC}"
+}
+
+# Execute the main function
+main
+
 run_validator() {
     local key="<your key>"  # Replace <your key> with the actual key
     local password="password"  # Replace "password" with the actual password if needed
