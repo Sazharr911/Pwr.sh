@@ -71,4 +71,19 @@ wget https://github.com/pwrlabs/PWR-Validator-Node/raw/main/config.json
 
 echo "$PASSWORD" | sudo tee password > /dev/null
 
+if echo "$password" | sudo java -jar validator.jar --import-key "$key" "$password"; then
+        print_success 
+        print_su
+"Key imported successfully."
+    
+ 
+else
+        print_error 
+        print_erro
+
+        print_
+"Failed to import key."
+    fi
+}
+
 
